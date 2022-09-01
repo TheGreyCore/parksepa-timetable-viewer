@@ -1,0 +1,82 @@
+<Container>:
+    orientation: 'vertical'
+    canvas.before:
+        Color:
+            rgba: (1,1,1,1)
+        Rectangle:
+            pos: self.pos
+            size: self.size
+
+    button_link: 2
+    label_link: label
+    link_label_day: label_day
+    #class_number_link: class_number
+
+    # Top menu
+    BoxLayout:
+        size_hint: 1, 0.1
+
+        # Background color
+        canvas.before:
+            Color:
+                rgba: (125/255,125/255,125/255,1)
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        # Day -
+        Button:
+            id: 2
+            text: "<"
+            #pos_hint: {'top': 1}
+            size_hint: 1, 1
+
+            background_color: rgba(1,1,1,1)
+
+            on_release:
+                root.day_math(-1)
+        
+        # Day
+        Label:
+            id: label_day
+            text: 'Day'
+            size_hint: 1, 0.9
+            #pos_hint: {'center_x': 1, 'center_y': 1}
+            color: (0,0,0,1)
+            halign: 'center'
+        
+        # Day increase
+        Button:
+            id: 2
+            text: ">"
+            #pos_hint: {'top': 1}
+            size_hint: 1, 1
+
+            background_color: rgba(1,1,1,1)
+
+            on_release:
+                root.day_math(1)
+
+    BoxLayout:
+        spacing: 10
+        orientation: 'vertical'
+
+            
+        Label:
+            id: label
+            text: 'Vajuta "Tänane tunniplaan" nuppu.'
+            size_hint: 1, 0.9
+            #pos_hint: {'center_x': 1, 'center_y': 1}
+            color: (0,0,0,1)
+
+        Button:
+            id: 2
+            text: "Tänane tunniplaan"
+            #pos_hint: {'top': 1}
+            size_hint: 1, 0.1
+
+            #color: 
+            #    rgba(1,1,1,1)
+
+            on_release:
+                root.update()
