@@ -14,7 +14,7 @@ Clone repository or download it:
 git clone https://github.com/TheGreyCord/parksepa-timetable-viewer
 ```
 
-I recommend install virtual environment:
+I recommend use virtual environment:
 ```
 python -m venv PATH
 ```
