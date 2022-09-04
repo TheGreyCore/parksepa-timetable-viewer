@@ -1,18 +1,8 @@
-from __future__ import print_function
 import os.path
-from datetime import datetime
-from turtle import update
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
-from googleapiclient.discovery import build
-from googleapiclient.errors import HttpError
 from googleapiclient import discovery
-import configparser
-
-# Config file read
-config = configparser.ConfigParser()
-config.read ('config.ini')
 
 # Scopes, I recommend not to change.
 # If modifying these scopes, delete the file token.json.
@@ -26,8 +16,8 @@ RANGE_LESSONS_TIME =  '11.b!A1:A48'
 #  Function to get data from google sheets
 def get_data(RANGE):
     
-    SPREADSHEET_ID = config['SETTINGS']['SPREADSHEET_ID'] # Take spreadsheet ID from config.ini file
-
+    SPREADSHEET_ID = '15vSrId7Kiz__4qFvo9WvX_FdR4zKQBQHQON93oF7Mzo' # Take spreadsheet ID from config.ini file
+    creds = None
     # The file token.json stores the user's access and refresh tokens, and is
     # created automatically when the authorization flow completes for the first
     # time.
@@ -56,12 +46,12 @@ def get_data(RANGE):
         print('[ERROR] No data found.')
         pass
     
-    # Unpack and add new line
     data = []
+    # Unpack and add new line
     for row in values:
             data.append("".join(row) + '\n')
-
     return data
+        
 
 class schedule():
 
@@ -83,13 +73,17 @@ class schedule():
 
         # Returning the scheldue || the day + the date
         if day_id >= 5 or day_id == 0: #Pühapäev - Esmaspäev
-            return "".join(week_schedule[1:8]), week_lessons_time[0].replace(",","\n")
+            r = week_lessons_time[0].replace("\n","")
+            return "".join(week_schedule[1:8]), r.replace(",","\n")
         if day_id == 1: # Teisipäev
-            return "".join(week_schedule[10:18]), week_lessons_time[9].replace(",","\n")
+            r = week_lessons_time[9].replace("\n","")
+            return "".join(week_schedule[10:18]), r.replace(",","\n")
         if day_id == 2: # Kolmapäev
-            return "".join(week_schedule[20:27]), week_lessons_time[19].replace(",","\n")
+            r = week_lessons_time[19].replace("\n","")
+            return "".join(week_schedule[20:27]), r.replace(",","\n")
         if day_id == 3: # Neljapäev
-            return "".join(week_schedule[29:36]), week_lessons_time[28].replace(",","\n")
+            r = week_lessons_time[28].replace("\n","")
+            return "".join(week_schedule[29:36]), r.replace(",","\n")
         if day_id == 4: # Reede
-            return "".join(week_schedule[38:45]), week_lessons_time[37].replace(",","\n")
-    
+            r = week_lessons_time[37].replace("\n","")
+            return "".join(week_schedule[38:45]), r.replace(",","\n")
