@@ -1,121 +1,6 @@
-<rootscreen>
-    # Background color
-    canvas.before:
-        Color:
-            rgba: (220/255,220/255,220/255,1)
-        Rectangle:
-            pos: self.pos
-            size: self.size
-
-    MDBoxLayout:
-        orientation: 'vertical'
-        MDSwiper:
-            id: swiper
-            MySwiper:
-                orientation: 'vertical'
-                Label:
-                    radius: [20, 20, 0, 0]
-                    id: Day_Label_1
-                    text: 'Day'
-                    size_hint: 1, 0.1
-                    color: (0,0,0,1)
-                    halign: 'center'
-                    canvas.before:
-                        Color:
-                            rgba: (224/255, 233/255, 235/255, 1)
-                        RoundedRectangle:
-                            pos: self.pos
-                            size: self.size
-                Label:
-                    id: Scheldue_Label_1
-                    text: 'Vajuta "Uuenda" nuppu.'
-                    size_hint: 1, 0.9
-                    color: (0,0,0,1)
-            MySwiper:
-                orientation: 'vertical'
-                Label:
-                    radius: [20, 20, 0, 0]
-                    id: Day_Label_2
-                    text: 'Day'
-                    size_hint: 1, 0.1
-                    color: (0,0,0,1)
-                    halign: 'center'
-                    canvas.before:
-                        Color:
-                            rgba: (224/255, 233/255, 235/255, 1)
-                        RoundedRectangle:
-                            pos: self.pos
-                            size: self.size
-                Label:
-                    id: Scheldue_Label_2
-                    text: 'Vajuta "Uuenda" nuppu.'
-                    size_hint: 1, 0.9
-                    color: (0,0,0,1)
-            MySwiper:
-                orientation: 'vertical'
-                Label:
-                    radius: [20, 20, 0, 0]
-                    id: Day_Label_3
-                    text: 'Day'
-                    size_hint: 1, 0.1
-                    color: (0,0,0,1)
-                    halign: 'center'
-                    canvas.before:
-                        Color:
-                            rgba: (224/255, 233/255, 235/255, 1)
-                        RoundedRectangle:
-                            pos: self.pos
-                            size: self.size
-                Label:
-                    id: Scheldue_Label_3
-                    text: 'Vajuta "Uuenda" nuppu.'
-                    size_hint: 1, 0.9
-                    color: (0,0,0,1)
-            MySwiper:
-                orientation: 'vertical'
-                Label:
-                    radius: [20, 20, 0, 0]
-                    id: Day_Label_4
-                    text: 'Day'
-                    size_hint: 1, 0.1
-                    color: (0,0,0,1)
-                    halign: 'center'
-                    canvas.before:
-                        Color:
-                            rgba: (224/255, 233/255, 235/255, 1)
-                        RoundedRectangle:
-                            pos: self.pos
-                            size: self.size
-                Label:
-                    id: Scheldue_Label_4
-                    text: 'Vajuta "Uuenda" nuppu.'
-                    size_hint: 1, 0.9
-                    color: (0,0,0,1)     
-            MySwiper:
-                orientation: 'vertical'
-                Label:
-                    radius: [20, 20, 0, 0]
-                    id: Day_Label_5
-                    text: 'Day'
-                    size_hint: 1, 0.1
-                    color: (0,0,0,1)
-                    halign: 'center'
-                    canvas.before:
-                        Color:
-                            rgba: (224/255, 233/255, 235/255, 1)
-                        RoundedRectangle:
-                            pos: self.pos
-                            size: self.size
-                Label:
-                    id: Scheldue_Label_5
-                    text: 'Vajuta "Uuenda" nuppu.'
-                    size_hint: 1, 0.9
-                    color: (0,0,0,1)                                  
-            
-    
-    MDBoxLayout:
-        size_hint: 1, 0.05
-
+<rootscreen>  
+    Screen:
+        name: 'rootscreen'
         MDBottomNavigation:
             radius: [20, 20, 0, 0]
             panel_color: (224/255.0 , 233/255.0 , 235/255.0)
@@ -123,31 +8,20 @@
             text_color_active: 0.2, 0.2, 0.2, 1
 
             MDBottomNavigationItem:
-                id: label_day
-                name: "update button"
-                icon: "update"
-                text: "Uuenda"
-                on_tab_press: root.update()
-
-            MDBottomNavigationItem:
                 name: "scheldue button"
                 icon: "calendar"
-                text: "Tänane tunniplaan"
-                on_tab_press: root.today()
+                text: "Tunniplaan"
+                #on_tab_press: root.today()
+                ScheldueScreen:
 
             MDBottomNavigationItem:
                 name: "class button"
                 icon: "account"
                 text: "Vali klass"
+                ClassMenuScreen:
 
-<MySwiper@MDSwiperItem>
-    canvas.before:
-        Color:
-            rgba: (.95,.95,.95,1)
-        RoundedRectangle:
-            pos: self.pos
-            size: self.size
-            radius: [(40, 40), (40, 40), (20, 20), (20, 20)]
+                    
+
 
 
     

@@ -1,0 +1,210 @@
+<ScheldueScreen>
+    Screen:
+        name: 'ScheldueScreen'
+        
+        MDSwiper:
+            id: swiper
+            MySwiper:
+                orientation: 'vertical'
+                Label:
+                    radius: [20, 20, 0, 0]
+                    id: Day_Label_1
+                    text: 'Day'
+                    size_hint: 1, 0.1
+                    color: (0,0,0,1)
+                    halign: 'center'
+                    canvas.before:
+                        Color:
+                            rgba: (224/255, 233/255, 235/255, 1)
+                        RoundedRectangle:
+                            pos: self.pos
+                            size: self.size
+                        
+                Label:
+                    id: Scheldue_Label_1
+                    text: 'Vajuta "Uuenda" nuppu.'
+                    size_hint: 1, 0.9
+                    color: (0,0,0,1)
+                MDIconButton:
+                    on_press: root.update()
+                    icon: "update" 
+
+                Label:
+                    id: Class_Label_1
+                    text: 'Klass'
+                    size_hint: 1, 0.1
+                    color: (0,0,0,1)
+                    halign: 'center'
+                    pos_hint: {"center_x": .5, "center_y": 0}
+                    canvas.before:
+                        Color:
+                            rgba: (224/255, 233/255, 235/255, 1)
+                        RoundedRectangle:
+                            pos: self.pos
+                            size: self.size
+
+            MySwiper:
+                orientation: 'vertical'
+                Label:
+                    radius: [20, 20, 0, 0]
+                    id: Day_Label_2
+                    text: 'Day'
+                    size_hint: 1, 0.1
+                    color: (0,0,0,1)
+                    halign: 'center'
+                    canvas.before:
+                        Color:
+                            rgba: (224/255, 233/255, 235/255, 1)
+                        RoundedRectangle:
+                            pos: self.pos
+                            size: self.size
+                Label:
+                    id: Scheldue_Label_2
+                    text: 'Vajuta "Uuenda" nuppu.'
+                    size_hint: 1, 0.9
+                    color: (0,0,0,1)
+                MDIconButton:
+                    on_press: root.update()
+                    icon: "update" 
+                
+                Label:
+                    id: Class_Label_2
+                    text: 'Klass'
+                    size_hint: 1, 0.1
+                    color: (0,0,0,1)
+                    halign: 'center'
+                    pos_hint: {"center_x": .5, "center_y": 0}
+                    canvas.before:
+                        Color:
+                            rgba: (224/255, 233/255, 235/255, 1)
+                        RoundedRectangle:
+                            pos: self.pos
+                            size: self.size
+                            
+                
+            MySwiper:
+                orientation: 'vertical'
+                Label:
+                    radius: [20, 20, 0, 0]
+                    id: Day_Label_3
+                    text: 'Day'
+                    size_hint: 1, 0.1
+                    color: (0,0,0,1)
+                    halign: 'center'
+                    canvas.before:
+                        Color:
+                            rgba: (224/255, 233/255, 235/255, 1)
+                        RoundedRectangle:
+                            pos: self.pos
+                            size: self.size
+                Label:
+                    id: Scheldue_Label_3
+                    text: 'Vajuta "Uuenda" nuppu.'
+                    size_hint: 1, 0.9
+                    color: (0,0,0,1)
+                MDIconButton:
+                    on_press: root.update()
+                    icon: "update"
+
+                Label:
+                    id: Class_Label_3
+                    text: 'Klass'
+                    size_hint: 1, 0.1
+                    color: (0,0,0,1)
+                    halign: 'center'
+                    pos_hint: {"center_x": .5, "center_y": 0}
+                    canvas.before:
+                        Color:
+                            rgba: (224/255, 233/255, 235/255, 1)
+                        RoundedRectangle:
+                            pos: self.pos
+                            size: self.size 
+                
+            MySwiper:
+                orientation: 'vertical'
+                Label:
+                    radius: [20, 20, 0, 0]
+                    id: Day_Label_4
+                    text: 'Day'
+                    size_hint: 1, 0.1
+                    color: (0,0,0,1)
+                    halign: 'center'
+                    canvas.before:
+                        Color:
+                            rgba: (224/255, 233/255, 235/255, 1)
+                        RoundedRectangle:
+                            pos: self.pos
+                            size: self.size
+                Label:
+                    id: Scheldue_Label_4
+                    text: 'Vajuta "Uuenda" nuppu.'
+                    size_hint: 1, 0.9
+                    color: (0,0,0,1) 
+                MDIconButton:
+                    on_press: root.update()
+                    icon: "update" 
+                
+                Label:
+                    id: Class_Label_4
+                    text: 'Klass'
+                    size_hint: 1, 0.1
+                    color: (0,0,0,1)
+                    halign: 'center'
+                    pos_hint: {"center_x": .5, "center_y": 0}
+                    canvas.before:
+                        Color:
+                            rgba: (224/255, 233/255, 235/255, 1)
+                        RoundedRectangle:
+                            pos: self.pos
+                            size: self.size
+                    
+            MySwiper:
+                orientation: 'vertical'
+                Label:
+                    radius: [20, 20, 0, 0]
+                    id: Day_Label_5
+                    text: 'Day'
+                    size_hint: 1, 0.1
+                    color: (0,0,0,1)
+                    halign: 'center'
+                    canvas.before:
+                        Color:
+                            rgba: (224/255, 233/255, 235/255, 1)
+                        RoundedRectangle:
+                            pos: self.pos
+                            size: self.size
+                Label:
+                    id: Scheldue_Label_5
+                    text: 'Vajuta "Uuenda" nuppu.'
+                    size_hint: 1, 0.9
+                    color: (0,0,0,1)
+                MDIconButton:
+                    on_press: root.update()
+                    icon: "update" 
+
+                Label:
+                    id: Class_Label_5
+                    text: 'Klass'
+                    size_hint: 1, 0.1
+                    color: (0,0,0,1)
+                    halign: 'center'
+                    pos_hint: {"center_x": .5, "center_y": 0}
+                    canvas.before:
+                        Color:
+                            rgba: (224/255, 233/255, 235/255, 1)
+                        RoundedRectangle:
+                            pos: self.pos
+                            size: self.size   
+        
+            
+            
+
+
+<MySwiper@MDSwiperItem>
+    canvas.before:
+        Color:
+            rgba: (.95,.95,.95,1)
+        RoundedRectangle:
+            pos: self.pos
+            size: self.size
+            radius: [(40, 40), (40, 40), (20, 20), (20, 20)]
