@@ -1,9 +1,7 @@
-from turtle import update
 from kivymd.uix.screen import MDScreen
 from schedule_api import schedule
 from datetime import datetime
 import configparser
-from kivymd.uix.screenmanager import MDScreenManager
 config = configparser.ConfigParser()
 
 # Get the day ID || Day_id is the number of the day, starting from 0
@@ -36,7 +34,6 @@ Class_Name = [
 ]
 
 class ScheldueScreen(MDScreen):
-    print('schelduescreen loaded')
     # Function when "Update" button is pressed
     def update(self):
         schedule.update()

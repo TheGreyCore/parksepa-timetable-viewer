@@ -8,7 +8,7 @@ class tunniplaan(MDApp):
         return rootscreen()
 
     def on_start(self):
-        #self.root.update()
+        self.root.update()
         pass
 
 if __name__ == '__main__':

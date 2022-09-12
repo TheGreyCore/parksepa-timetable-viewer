@@ -1,143 +1,145 @@
 <ClassMenuScreen>
-    ScrollView:
+    MDScreen:
+        name: 'ClassMenuScreen'
+        ScrollView:
 
-        MDGridLayout:
-            cols: 1
-            padding: 5,5
-            spacing: 10,10
+            MDGridLayout:
+                cols: 1
+                padding: 5,5
+                spacing: 10,10
 
-            height: self.minimum_height
-            size_hint_y: None
+                height: self.minimum_height
+                size_hint_y: None
 
-            MDRaisedButton:
-                text: "1. klass"
-                md_bg_color: (85/255, 110/255, 117/255, 1)
-                pos_hint: {"center_x": .5, "center_y": .5}
-                size_hint: 1, 0.4
-                on_press: root.change_class('0')
+                MDRaisedButton:
+                    text: "1. klass"
+                    md_bg_color: (85/255, 110/255, 117/255, 1)
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    size_hint: 1, 0.4
+                    on_press: root.change_class('0')
 
-            MDRaisedButton:
-                text: "2. klass"
-                md_bg_color: (85/255, 110/255, 117/255, 1)
-                pos_hint: {"center_x": .5, "center_y": .5}
-                size_hint: 1, 0.4
-                on_press: root.change_class('1')
-            
-            MDRaisedButton:
-                text: "3.a klass"
-                md_bg_color: (85/255, 110/255, 117/255, 1)
-                pos_hint: {"center_x": .5, "center_y": .5}
-                size_hint: 1, 0.4
-                on_press: root.change_class('2')
+                MDRaisedButton:
+                    text: "2. klass"
+                    md_bg_color: (85/255, 110/255, 117/255, 1)
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    size_hint: 1, 0.4
+                    on_press: root.change_class('1')
+                
+                MDRaisedButton:
+                    text: "3.a klass"
+                    md_bg_color: (85/255, 110/255, 117/255, 1)
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    size_hint: 1, 0.4
+                    on_press: root.change_class('2')
 
-            MDRaisedButton:
-                text: "3.b klass"
-                md_bg_color: (85/255, 110/255, 117/255, 1)
-                pos_hint: {"center_x": .5, "center_y": .5}
-                size_hint: 1, 0.4
-                on_press: root.change_class('3')
-            
-            MDRaisedButton:
-                text: "3.v klass"
-                md_bg_color: (85/255, 110/255, 117/255, 1)
-                pos_hint: {"center_x": .5, "center_y": .5}
-                size_hint: 1, 0.4
-                on_press: root.change_class('4')
+                MDRaisedButton:
+                    text: "3.b klass"
+                    md_bg_color: (85/255, 110/255, 117/255, 1)
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    size_hint: 1, 0.4
+                    on_press: root.change_class('3')
+                
+                MDRaisedButton:
+                    text: "3.v klass"
+                    md_bg_color: (85/255, 110/255, 117/255, 1)
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    size_hint: 1, 0.4
+                    on_press: root.change_class('4')
 
-            MDRaisedButton:
-                text: "4. klass"
-                md_bg_color: (85/255, 110/255, 117/255, 1)
-                pos_hint: {"center_x": .5, "center_y": .5}
-                size_hint: 1, 0.4
-                on_press: root.change_class('5')
+                MDRaisedButton:
+                    text: "4. klass"
+                    md_bg_color: (85/255, 110/255, 117/255, 1)
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    size_hint: 1, 0.4
+                    on_press: root.change_class('5')
 
-            MDRaisedButton:
-                text: "5.a klass"
-                md_bg_color: (85/255, 110/255, 117/255, 1)
-                pos_hint: {"center_x": .5, "center_y": .5}
-                size_hint: 1, 0.4
-                on_press: root.change_class('6')
+                MDRaisedButton:
+                    text: "5.a klass"
+                    md_bg_color: (85/255, 110/255, 117/255, 1)
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    size_hint: 1, 0.4
+                    on_press: root.change_class('6')
 
-            MDRaisedButton:
-                text: "5.b klass"
-                md_bg_color: (85/255, 110/255, 117/255, 1)
-                pos_hint: {"center_x": .5, "center_y": .5}
-                size_hint: 0.5, 0.2
-                on_press: root.change_class('7')
+                MDRaisedButton:
+                    text: "5.b klass"
+                    md_bg_color: (85/255, 110/255, 117/255, 1)
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    size_hint: 0.5, 0.2
+                    on_press: root.change_class('7')
 
-            MDRaisedButton:
-                text: "6. klass"
-                md_bg_color: (85/255, 110/255, 117/255, 1)
-                pos_hint: {"center_x": .5, "center_y": .5}
-                size_hint: 1, 0.4
-                on_press: root.change_class('8')
+                MDRaisedButton:
+                    text: "6. klass"
+                    md_bg_color: (85/255, 110/255, 117/255, 1)
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    size_hint: 1, 0.4
+                    on_press: root.change_class('8')
 
-            MDRaisedButton:
-                text: "7. klass"
-                md_bg_color: (85/255, 110/255, 117/255, 1)
-                pos_hint: {"center_x": .5, "center_y": .5}
-                size_hint: 1, 0.4
-                on_press: root.change_class('9')
-            
-            MDRaisedButton:
-                text: "7.v klass"
-                md_bg_color: (85/255, 110/255, 117/255, 1)
-                pos_hint: {"center_x": .5, "center_y": .5}
-                size_hint: 1, 0.4
-                on_press: root.change_class('10')
-            
-            MDRaisedButton:
-                text: "8. klass"
-                md_bg_color: (85/255, 110/255, 117/255, 1)
-                pos_hint: {"center_x": .5, "center_y": .5}
-                size_hint: 1, 0.4
-                on_press: root.change_class('11')
-            
-            MDRaisedButton:
-                text: "9. klass"
-                md_bg_color: (85/255, 110/255, 117/255, 1)
-                pos_hint: {"center_x": .5, "center_y": .5}
-                size_hint: 1, 0.4
-                on_press: root.change_class('12')
-            
-            MDRaisedButton:
-                text: "9.v klass"
-                md_bg_color: (85/255, 110/255, 117/255, 1)
-                pos_hint: {"center_x": .5, "center_y": .5}
-                size_hint: 1, 0.4
-                on_press: root.change_class('13')
-            
-            MDRaisedButton:
-                text: "10.a klass"
-                md_bg_color: (85/255, 110/255, 117/255, 1)
-                pos_hint: {"center_x": .5, "center_y": .5}
-                size_hint: 1, 0.4
-                on_press: root.change_class('14')
+                MDRaisedButton:
+                    text: "7. klass"
+                    md_bg_color: (85/255, 110/255, 117/255, 1)
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    size_hint: 1, 0.4
+                    on_press: root.change_class('9')
+                
+                MDRaisedButton:
+                    text: "7.v klass"
+                    md_bg_color: (85/255, 110/255, 117/255, 1)
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    size_hint: 1, 0.4
+                    on_press: root.change_class('10')
+                
+                MDRaisedButton:
+                    text: "8. klass"
+                    md_bg_color: (85/255, 110/255, 117/255, 1)
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    size_hint: 1, 0.4
+                    on_press: root.change_class('11')
+                
+                MDRaisedButton:
+                    text: "9. klass"
+                    md_bg_color: (85/255, 110/255, 117/255, 1)
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    size_hint: 1, 0.4
+                    on_press: root.change_class('12')
+                
+                MDRaisedButton:
+                    text: "9.v klass"
+                    md_bg_color: (85/255, 110/255, 117/255, 1)
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    size_hint: 1, 0.4
+                    on_press: root.change_class('13')
+                
+                MDRaisedButton:
+                    text: "10.a klass"
+                    md_bg_color: (85/255, 110/255, 117/255, 1)
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    size_hint: 1, 0.4
+                    on_press: root.change_class('14')
 
-            MDRaisedButton:
-                text: "10.b klass"
-                md_bg_color: (85/255, 110/255, 117/255, 1)
-                pos_hint: {"center_x": .5, "center_y": .5}
-                size_hint: 1, 0.4
-                on_press: root.change_class('15')
-            
-            MDRaisedButton:
-                text: "11. klass"
-                md_bg_color: (85/255, 110/255, 117/255, 1)
-                pos_hint: {"center_x": .5, "center_y": .5}
-                size_hint: 1, 0.4
-                on_press: root.change_class('16')
-            
-            MDRaisedButton:
-                text: "12.a klass"
-                md_bg_color: (85/255, 110/255, 117/255, 1)
-                pos_hint: {"center_x": .5, "center_y": .5}
-                size_hint: 1, 0.4
-                on_press: root.change_class('17')
+                MDRaisedButton:
+                    text: "10.b klass"
+                    md_bg_color: (85/255, 110/255, 117/255, 1)
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    size_hint: 1, 0.4
+                    on_press: root.change_class('15')
+                
+                MDRaisedButton:
+                    text: "11. klass"
+                    md_bg_color: (85/255, 110/255, 117/255, 1)
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    size_hint: 1, 0.4
+                    on_press: root.change_class('16')
+                
+                MDRaisedButton:
+                    text: "12.a klass"
+                    md_bg_color: (85/255, 110/255, 117/255, 1)
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    size_hint: 1, 0.4
+                    on_press: root.change_class('17')
 
-            MDRaisedButton:
-                text: "12.b klass"
-                md_bg_color: (85/255, 110/255, 117/255, 1)
-                pos_hint: {"center_x": .5, "center_y": .5}
-                size_hint: 1, 0.4
-                on_press: root.change_class('18')
+                MDRaisedButton:
+                    text: "12.b klass"
+                    md_bg_color: (85/255, 110/255, 117/255, 1)
+                    pos_hint: {"center_x": .5, "center_y": .5}
+                    size_hint: 1, 0.4
+                    on_press: root.change_class('18')

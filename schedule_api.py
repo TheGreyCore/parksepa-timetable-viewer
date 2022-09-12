@@ -1,10 +1,11 @@
+import imp
 import os.path
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient import discovery
 import configparser
-
+from kivymd.uix.dialog import MDDialog
 config = configparser.ConfigParser()
 
 # Scopes, I recommend not to change.
@@ -36,24 +37,26 @@ RANGE_LESSONS_TIME =  'schedule!A1:A48'
 
 #  Function to get data from google sheets
 def get_data(RANGE):
-    try:
         creds = None
         # The file token.json stores the user's access and refresh tokens, and is
         # created automatically when the authorization flow completes for the first
         # time.
         if os.path.exists('token.json'):
                 creds = Credentials.from_authorized_user_file('token.json', SCOPES)
+        try:
+            if not creds or not creds.valid:
+                if creds and creds.expired and creds.refresh_token:
+                    creds.refresh(Request())
+                else:
+                    flow = InstalledAppFlow.from_client_secrets_file(
+                        'credentials.json', SCOPES)
+                    creds = flow.run_local_server(port=0)
+                # Save the credentials for the next run
+                with open('token.json', 'w') as token:
+                    token.write(creds.to_json())
+        except:
+            os.remove('token.json')
 
-        if not creds or not creds.valid:
-            if creds and creds.expired and creds.refresh_token:
-                creds.refresh(Request())
-            else:
-                flow = InstalledAppFlow.from_client_secrets_file(
-                    'credentials.json', SCOPES)
-                creds = flow.run_local_server(port=0)
-            # Save the credentials for the next run
-            with open('token.json', 'w') as token:
-                token.write(creds.to_json())
 
         service = discovery.build('sheets', 'v4', credentials=creds)
         sheet = service.spreadsheets()
@@ -72,9 +75,6 @@ def get_data(RANGE):
         for row in values:
             data.append("".join(row) + '\n')
         return data
-    except:
-        os.remove('token.json')
-        get_data(RANGE)
 
 class schedule():
 
