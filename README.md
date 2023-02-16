@@ -1,6 +1,9 @@
 # Parksepa timetable viewer
 Timetable viewer for Parksepa High School written on python using kivy and google sheets api.
 
+## Important note
+Kivy works slow on android, due to that, developing of that application is now temporarily stopped. I will resurrect this project as soon as possible.
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
